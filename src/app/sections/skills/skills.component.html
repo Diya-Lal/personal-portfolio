@@ -1,0 +1,27 @@
+<section class="skills-section">
+  <div class="section-inner">
+    <div class="skills-heading">
+      <span class="pixel section-tag">ABILITIES</span>
+      <h2 class="section-title">Skills &amp; Arsenal</h2>
+      <p class="section-sub">The tools I wield.</p>
+    </div>
+
+    <div class="skills-grid">
+      <div
+        class="skill-card"
+        *ngFor="let skill of skills"
+        [class]="'skill-card cat-' + skill.category"
+        (mouseenter)="activeSkill = skill"
+        (mouseleave)="activeSkill = null">
+
+        <div class="skill-front">
+          <span class="skill-name">{{ skill.name }}</span>
+        </div>
+
+        <div class="skill-back">
+          <span class="category-tag pixel">{{ skill.category }}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

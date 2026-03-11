@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #07090e;
+  --surface: #0d1421;
+  --surface-2: #141d2e;
+  --accent: #64ffda;
+  --accent-warm: #ff9f43;
+  --accent-purple: #a29bfe;
+  --text: #e2e8f0;
+  --muted: #64748b;
+  --border: #1e3a5f;
+  --pixel-font: 'Press Start 2P', monospace;
+  --body-font: 'Syne', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--body-font);
+  overflow-x: hidden;
+}
+
+.pixel {
+  font-family: var(--pixel-font);
+}

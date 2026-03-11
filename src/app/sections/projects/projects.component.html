@@ -1,0 +1,31 @@
+<section class="projects-section">
+  <div class="section-inner">
+    <div class="projects-heading">
+      <span class="pixel section-tag">SHOWCASE</span>
+      <h2 class="section-title">Featured Projects</h2>
+      <p class="section-sub">Things I built that I'm proud of.</p>
+    </div>
+
+    <div class="projects-grid">
+      <div
+        class="project-card"
+        *ngFor="let p of projects"
+        [style.--card-color]="p.color"
+      >
+        <div class="card-header">
+          <span class="card-icon" [innerHTML]="p.icon"></span>
+          <span class="pixel card-status">{{ p.status }}</span>
+        </div>
+        <h3 class="card-name">{{ p.name }}</h3>
+        <p class="card-desc">{{ p.desc }}</p>
+        <div class="card-tech">
+          <span class="tech-chip pixel" *ngFor="let t of p.tech">{{ t }}</span>
+        </div>
+        <div class="card-footer">
+          <a class="view-link pixel" [href]="p.link" target="_blank" rel="noopener">VIEW PROJECT &gt;</a>
+        </div>
+        <div class="card-glow"></div>
+      </div>
+    </div>
+  </div>
+</section>

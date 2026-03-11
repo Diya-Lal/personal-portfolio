@@ -1,0 +1,822 @@
+<section class="timeline-section" #timelineSection>
+  <!-- ── Moving world ───────────────────────────────────── -->
+  <div class="world" #world>
+    <!-- Stage 1 · Birth -->
+    <div class="stage bg-birth">
+      <div class="env">
+        <div
+          class="star"
+          *ngFor="let s of stars"
+          [style.top]="s.top"
+          [style.left]="s.left"
+          [style.width]="s.size"
+          [style.height]="s.size"
+          [style.opacity]="s.opacity"
+          [style.animationDuration]="s.duration"
+          [style.animationDelay]="s.delay"
+        ></div>
+        <div class="moon"></div>
+        <div class="hill hill-a"></div>
+        <div class="hill hill-b"></div>
+        <div class="prop-egg">
+          <div class="prop-egg-body">
+            <div class="prop-egg-shine"></div>
+          </div>
+          <div class="prop-egg-base"></div>
+        </div>
+      </div>
+      <div class="stage-info stage-info--right">
+        <span class="pixel stage-num">STAGE 01</span>
+        <h2 class="stage-title">Birth of Curiosity</h2>
+        <p class="stage-year pixel">Year Zero</p>
+        <p class="stage-desc">
+          Every great developer starts somewhere. Mine started with wonder — the
+          glow of a screen and a thousand unanswered questions.
+        </p>
+        <div class="traits">
+          <span class="trait-label pixel">TRAITS UNLOCKED</span>
+          <div class="trait-list">
+            <span class="trait">&#9670; Curiosity</span>
+            <span class="trait">&#9670; Problem Solving</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 2 · School -->
+    <div class="stage bg-school">
+      <div class="env">
+        <div class="sun"></div>
+        <div class="cloud cloud-a"></div>
+        <div class="cloud cloud-b"></div>
+        <div class="tree tree-a"></div>
+        <div class="tree tree-b"></div>
+        <div class="tree tree-c"></div>
+        <div class="school-building">
+          <div class="school-roof"></div>
+          <div class="school-windows"></div>
+          <div class="school-door"></div>
+        </div>
+      </div>
+      <div class="stage-info stage-info--left">
+        <span class="pixel stage-num">STAGE 02</span>
+        <h2 class="stage-title">School Years</h2>
+        <p class="stage-year pixel">2010s</p>
+        <p class="stage-desc">
+          First contact. A keyboard, a monitor, a blinking cursor. Something
+          clicked that day and never stopped.
+        </p>
+        <div class="traits">
+          <span class="trait-label pixel">TRAITS UNLOCKED</span>
+          <div class="trait-list">
+            <span class="trait">&#9670; Logic</span>
+            <span class="trait">&#9670; Creativity</span>
+            <span class="trait">&#9670; Persistence</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 3 · College -->
+    <div class="stage bg-college">
+      <div class="env">
+        <div class="dusk-glow"></div>
+        <div class="uni-building">
+          <div class="uni-tower"></div>
+          <div class="uni-windows"></div>
+        </div>
+        <div class="floating-code code-a pixel">&lt;html&gt;</div>
+        <div class="floating-code code-b pixel">.css &#123;&#125;</div>
+        <div class="floating-code code-c pixel">js()</div>
+        <div class="book book-a"></div>
+        <div class="book book-b"></div>
+      </div>
+      <div class="stage-info stage-info--right">
+        <span class="pixel stage-num">STAGE 03</span>
+        <h2 class="stage-title">College · Discovery</h2>
+        <p class="stage-year pixel">2018</p>
+        <p class="stage-desc">
+          HTML. CSS. JavaScript. Three words that rewired my brain entirely. The
+          world made sense in code.
+        </p>
+        <div class="traits">
+          <span class="trait-label pixel">SKILLS DISCOVERED</span>
+          <div class="trait-list">
+            <span class="trait">&#9670; HTML</span>
+            <span class="trait">&#9670; CSS</span>
+            <span class="trait">&#9670; JavaScript</span>
+            <span class="trait">&#9670; Git</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 4 · First Job -->
+    <div class="stage bg-job">
+      <div class="env">
+        <div class="city-building b1"><div class="city-windows"></div></div>
+        <div class="city-building b2"><div class="city-windows"></div></div>
+        <div class="city-building b3"><div class="city-windows"></div></div>
+        <div class="monitor-glow"></div>
+        <div class="terminal-window">
+          <div class="terminal-bar"></div>
+          <div class="terminal-line pixel">$ ng serve</div>
+          <div class="terminal-line accent pixel">✓ compiled</div>
+        </div>
+      </div>
+      <div class="stage-info stage-info--left">
+        <span class="pixel stage-num">STAGE 04</span>
+        <h2 class="stage-title">Developer Unlocked</h2>
+        <p class="stage-year pixel">2021</p>
+        <p class="stage-desc">
+          First industry job. Angular loaded. TypeScript compiled. Career:
+          initiated. Real products, real users, real impact.
+        </p>
+        <div class="traits">
+          <span class="trait-label pixel">STACK EQUIPPED</span>
+          <div class="trait-list">
+            <span class="trait">&#9670; Angular</span>
+            <span class="trait">&#9670; TypeScript</span>
+            <span class="trait">&#9670; REST APIs</span>
+            <span class="trait">&#9670; Agile</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stage 5 · Senior -->
+    <div class="stage bg-senior">
+      <div class="env">
+        <div
+          class="star"
+          *ngFor="let s of stars"
+          [style.top]="s.top"
+          [style.left]="s.left"
+          [style.width]="s.size"
+          [style.height]="s.size"
+          [style.opacity]="s.opacity"
+          [style.animationDuration]="s.duration"
+          [style.animationDelay]="s.delay"
+        ></div>
+        <div class="nebula"></div>
+        <div class="orbit-ring ring-a"></div>
+        <div class="orbit-ring ring-b"></div>
+        <div class="floating-code code-d pixel">Nx</div>
+        <div class="floating-code code-e pixel">&#956;FE</div>
+        <div class="floating-code code-f pixel">RxJS</div>
+      </div>
+      <div class="stage-info stage-info--right">
+        <span class="pixel stage-num">STAGE 05</span>
+        <h2 class="stage-title">Level Up</h2>
+        <p class="stage-year pixel">2024 — Now</p>
+        <p class="stage-desc">
+          Architecture. Mentorship. Microfrontends at scale. Performance
+          obsession. The journey never ends.
+        </p>
+        <div class="traits">
+          <span class="trait-label pixel">MASTERED</span>
+          <div class="trait-list">
+            <span class="trait">&#9670; Nx Monorepos</span>
+            <span class="trait">&#9670; Microfrontends</span>
+            <span class="trait">&#9670; Performance</span>
+            <span class="trait">&#9670; Leadership</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- /world -->
+
+  <!-- ── Avatar layer (fixed on screen) ────────────────── -->
+  <div class="avatar-layer">
+    <div class="ground-line"></div>
+
+    <div class="avatar-wrapper" [ngClass]="'avatar-s' + currentStage">
+      <!-- Stage 1: egg -->
+      <ng-container *ngIf="currentStage === 1">
+        <div class="ava-egg">
+          <div class="ava-egg-body"><div class="ava-egg-shine"></div></div>
+        </div>
+      </ng-container>
+
+      <!-- Stage 2: Baby school girl -->
+      <ng-container *ngIf="currentStage === 2">
+        <svg
+          viewBox="0 0 52 86"
+          class="sw sw-s2"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Pigtail left -->
+          <ellipse
+            cx="11"
+            cy="16"
+            rx="7"
+            ry="4.5"
+            fill="#2d1b0e"
+            transform="rotate(-25 11 16)"
+          />
+          <!-- Pigtail right -->
+          <ellipse
+            cx="41"
+            cy="16"
+            rx="7"
+            ry="4.5"
+            fill="#2d1b0e"
+            transform="rotate(25 41 16)"
+          />
+          <!-- Hair top -->
+          <ellipse cx="26" cy="9" rx="12" ry="7" fill="#2d1b0e" />
+          <!-- Head -->
+          <circle cx="26" cy="19" r="13" fill="#d4956a" />
+          <!-- Eyes white -->
+          <circle cx="20" cy="17" r="3.5" fill="white" />
+          <circle cx="32" cy="17" r="3.5" fill="white" />
+          <!-- Pupils -->
+          <circle cx="21" cy="17" r="2" fill="#1a1a2a" />
+          <circle cx="33" cy="17" r="2" fill="#1a1a2a" />
+          <!-- Eye shine -->
+          <circle cx="21.8" cy="16" r="0.7" fill="white" />
+          <circle cx="33.8" cy="16" r="0.7" fill="white" />
+          <!-- Smile -->
+          <path
+            d="M 22 23 Q 26 26.5 30 23"
+            stroke="#a06040"
+            stroke-width="1.2"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Neck -->
+          <rect x="22" y="31" width="8" height="5" rx="2" fill="#d4956a" />
+          <!-- White shirt -->
+          <rect x="14" y="35" width="24" height="15" rx="4" fill="white" />
+          <!-- Navy pinafore -->
+          <rect x="12" y="49" width="28" height="13" rx="3" fill="#1e3a8a" />
+          <!-- Red backpack -->
+          <rect x="5" y="34" width="10" height="17" rx="3" fill="#dc2626" />
+          <rect x="6" y="36" width="8" height="13" rx="2" fill="#b91c1c" />
+          <!-- Right arm -->
+          <rect
+            x="38"
+            y="36"
+            width="7"
+            height="13"
+            rx="3.5"
+            fill="#d4956a"
+            class="arm-r"
+          />
+          <!-- Left leg -->
+          <rect
+            x="15"
+            y="61"
+            width="9"
+            height="19"
+            rx="4.5"
+            fill="#1e3a8a"
+            class="leg-l"
+          />
+          <!-- Right leg -->
+          <rect
+            x="27"
+            y="61"
+            width="9"
+            height="19"
+            rx="4.5"
+            fill="#1e3a8a"
+            class="leg-r"
+          />
+          <!-- Shoes -->
+          <ellipse cx="19.5" cy="81" rx="6.5" ry="3.5" fill="#111" />
+          <ellipse cx="31.5" cy="81" rx="6.5" ry="3.5" fill="#111" />
+        </svg>
+      </ng-container>
+
+      <!-- Stage 3: College student -->
+      <ng-container *ngIf="currentStage === 3">
+        <svg
+          viewBox="0 0 58 104"
+          class="sw sw-s3"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Ponytail -->
+          <rect x="5" y="14" width="7" height="22" rx="3.5" fill="#2d1b0e" />
+          <ellipse
+            cx="14"
+            cy="17"
+            rx="9"
+            ry="5"
+            fill="#2d1b0e"
+            transform="rotate(20 14 17)"
+          />
+          <!-- Hair -->
+          <ellipse cx="29" cy="10" rx="13" ry="8" fill="#2d1b0e" />
+          <!-- Head -->
+          <circle cx="29" cy="21" r="14" fill="#d4956a" />
+          <!-- Eyes white -->
+          <circle cx="23" cy="18" r="4" fill="white" />
+          <circle cx="35" cy="18" r="4" fill="white" />
+          <!-- Pupils -->
+          <circle cx="24" cy="18" r="2.5" fill="#1a1a2a" />
+          <circle cx="36" cy="18" r="2.5" fill="#1a1a2a" />
+          <!-- Shine -->
+          <circle cx="24.8" cy="17" r="0.9" fill="white" />
+          <circle cx="36.8" cy="17" r="0.9" fill="white" />
+          <!-- Eyebrows (determined) -->
+          <path
+            d="M 20 13 Q 23 11 26 13"
+            stroke="#2d1b0e"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 32 13 Q 35 11 38 13"
+            stroke="#2d1b0e"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Smile -->
+          <path
+            d="M 24 26 Q 29 30 34 26"
+            stroke="#a06040"
+            stroke-width="1.3"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Graduation cap -->
+          <rect x="17" y="7" width="24" height="5" rx="1" fill="#1e1b4b" />
+          <rect x="20" y="2" width="18" height="7" rx="1" fill="#312e81" />
+          <!-- Tassel -->
+          <line
+            x1="40"
+            y1="7"
+            x2="45"
+            y2="17"
+            stroke="#f59e0b"
+            stroke-width="1.5"
+          />
+          <circle cx="45" cy="19" r="2.5" fill="#f59e0b" />
+          <!-- Neck -->
+          <rect x="25" y="34" width="8" height="6" rx="2" fill="#d4956a" />
+          <!-- Purple hoodie -->
+          <rect x="13" y="39" width="32" height="24" rx="5" fill="#7c3aed" />
+          <!-- Hoodie pocket -->
+          <rect x="19" y="53" width="20" height="8" rx="2" fill="#6d28d9" />
+          <!-- Left arm -->
+          <rect
+            x="5"
+            y="40"
+            width="9"
+            height="18"
+            rx="4.5"
+            fill="#7c3aed"
+            class="arm-l"
+          />
+          <!-- Right arm (holding book) -->
+          <rect
+            x="44"
+            y="40"
+            width="9"
+            height="18"
+            rx="4.5"
+            fill="#7c3aed"
+            class="arm-r"
+          />
+          <!-- Book -->
+          <rect x="43" y="49" width="13" height="18" rx="2" fill="#a29bfe" />
+          <line
+            x1="49"
+            y1="49"
+            x2="49"
+            y2="67"
+            stroke="rgba(255,255,255,0.3)"
+            stroke-width="1"
+          />
+          <!-- Dark pants -->
+          <rect x="17" y="62" width="24" height="12" rx="3" fill="#1e293b" />
+          <!-- Left leg -->
+          <rect
+            x="17"
+            y="73"
+            width="11"
+            height="25"
+            rx="5.5"
+            fill="#1e293b"
+            class="leg-l"
+          />
+          <!-- Right leg -->
+          <rect
+            x="30"
+            y="73"
+            width="11"
+            height="25"
+            rx="5.5"
+            fill="#1e293b"
+            class="leg-r"
+          />
+          <!-- Shoes -->
+          <ellipse cx="22.5" cy="99" rx="8" ry="4" fill="#111" />
+          <ellipse cx="35.5" cy="99" rx="8" ry="4" fill="#111" />
+        </svg>
+      </ng-container>
+
+      <!-- Stage 4: Developer -->
+      <ng-container *ngIf="currentStage === 4">
+        <svg
+          viewBox="0 0 66 120"
+          class="sw sw-s4"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Hair bun -->
+          <circle cx="33" cy="9" r="9" fill="#2d1b0e" />
+          <circle cx="33" cy="9" r="5" fill="#3d2510" />
+          <ellipse cx="33" cy="15" rx="14" ry="7" fill="#2d1b0e" />
+          <!-- Head -->
+          <circle cx="33" cy="24" r="14" fill="#d4956a" />
+          <!-- Glasses frames -->
+          <circle
+            cx="26"
+            cy="22"
+            r="5.5"
+            fill="none"
+            stroke="#64ffda"
+            stroke-width="1.3"
+          />
+          <circle
+            cx="39"
+            cy="22"
+            r="5.5"
+            fill="none"
+            stroke="#64ffda"
+            stroke-width="1.3"
+          />
+          <line
+            x1="31.5"
+            y1="22"
+            x2="33.5"
+            y2="22"
+            stroke="#64ffda"
+            stroke-width="1.3"
+          />
+          <line
+            x1="20.5"
+            y1="22"
+            x2="16"
+            y2="21"
+            stroke="#64ffda"
+            stroke-width="1.3"
+          />
+          <line
+            x1="44.5"
+            y1="22"
+            x2="49"
+            y2="21"
+            stroke="#64ffda"
+            stroke-width="1.3"
+          />
+          <!-- Eyes through glasses -->
+          <circle cx="26" cy="22" r="2.8" fill="#1a1a2a" />
+          <circle cx="39" cy="22" r="2.8" fill="#1a1a2a" />
+          <circle cx="26.9" cy="21" r="1" fill="white" />
+          <circle cx="39.9" cy="21" r="1" fill="white" />
+          <!-- Focused mouth -->
+          <path
+            d="M 29 29 Q 33 31.5 37 29"
+            stroke="#a06040"
+            stroke-width="1.3"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Neck -->
+          <rect x="29" y="37" width="8" height="6" rx="2" fill="#d4956a" />
+          <!-- Dark hoodie -->
+          <rect x="15" y="42" width="36" height="28" rx="5" fill="#1e1e2e" />
+          <!-- Code symbol on hoodie -->
+          <path
+            d="M 26 54 L 23 58 L 26 62"
+            stroke="#64ffda"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <line
+            x1="30"
+            y1="53"
+            x2="28"
+            y2="63"
+            stroke="#64ffda"
+            stroke-width="1.5"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 32 54 L 35 58 L 32 62"
+            stroke="#64ffda"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- Left arm -->
+          <rect
+            x="5"
+            y="43"
+            width="11"
+            height="20"
+            rx="5.5"
+            fill="#1e1e2e"
+            class="arm-l"
+          />
+          <!-- Right arm -->
+          <rect
+            x="50"
+            y="43"
+            width="11"
+            height="20"
+            rx="5.5"
+            fill="#1e1e2e"
+            class="arm-r"
+          />
+          <!-- Laptop held in hands -->
+          <rect x="12" y="60" width="32" height="20" rx="2" fill="#0f172a" />
+          <rect
+            x="13"
+            y="61"
+            width="30"
+            height="17"
+            rx="1"
+            fill="#64ffda"
+            opacity="0.9"
+          />
+          <!-- Code lines on screen -->
+          <rect
+            x="15"
+            y="63"
+            width="14"
+            height="1.5"
+            rx="0.5"
+            fill="#0f172a"
+            opacity="0.7"
+          />
+          <rect
+            x="15"
+            y="66"
+            width="9"
+            height="1.5"
+            rx="0.5"
+            fill="#0f172a"
+            opacity="0.7"
+          />
+          <rect
+            x="15"
+            y="69"
+            width="18"
+            height="1.5"
+            rx="0.5"
+            fill="#0f172a"
+            opacity="0.7"
+          />
+          <rect
+            x="15"
+            y="72"
+            width="11"
+            height="1.5"
+            rx="0.5"
+            fill="#0f172a"
+            opacity="0.7"
+          />
+          <!-- Screen glow underneath -->
+          <ellipse
+            cx="28"
+            cy="82"
+            rx="16"
+            ry="3"
+            fill="rgba(100,255,218,0.2)"
+          />
+          <!-- Pants -->
+          <rect x="19" y="69" width="28" height="14" rx="3" fill="#1e293b" />
+          <!-- Left leg -->
+          <rect
+            x="19"
+            y="82"
+            width="12"
+            height="30"
+            rx="6"
+            fill="#1e293b"
+            class="leg-l"
+          />
+          <!-- Right leg -->
+          <rect
+            x="35"
+            y="82"
+            width="12"
+            height="30"
+            rx="6"
+            fill="#1e293b"
+            class="leg-r"
+          />
+          <!-- Shoes -->
+          <ellipse cx="25" cy="113" rx="9" ry="5" fill="#0f0f1a" />
+          <ellipse cx="41" cy="113" rx="9" ry="5" fill="#0f0f1a" />
+        </svg>
+      </ng-container>
+
+      <!-- Stage 5: Superwoman -->
+      <ng-container *ngIf="currentStage === 5">
+        <svg
+          viewBox="0 0 110 138"
+          class="sw sw-s5"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <!-- Aura rings -->
+          <ellipse
+            cx="52"
+            cy="80"
+            rx="58"
+            ry="44"
+            fill="none"
+            stroke="rgba(100,255,218,0.07)"
+            stroke-width="2.5"
+          />
+          <ellipse
+            cx="52"
+            cy="80"
+            rx="46"
+            ry="35"
+            fill="none"
+            stroke="rgba(100,255,218,0.11)"
+            stroke-width="1.5"
+          />
+          <!-- Cape (flowing left/behind) -->
+          <path
+            d="M 28 44 Q 4 62 6 96 Q 10 116 22 126 L 26 120 Q 16 106 18 82 Q 20 62 32 52 Z"
+            fill="#1e3a8a"
+            opacity="0.95"
+          />
+          <path
+            d="M 30 46 Q 12 66 14 98 Q 18 114 26 122 L 30 116 Q 22 100 24 80 Q 26 62 34 54 Z"
+            fill="#3b5bdb"
+            opacity="0.65"
+          />
+          <!-- Cape highlight edge -->
+          <path
+            d="M 28 44 Q 4 62 6 96 Q 10 116 22 126"
+            stroke="rgba(255,255,255,0.18)"
+            stroke-width="1"
+            fill="none"
+          />
+          <!-- Hair flowing back -->
+          <path
+            d="M 46 10 Q 30 16 22 28 Q 14 44 16 58 Q 8 48 8 30 Q 12 12 30 6 Z"
+            fill="#2d1b0e"
+          />
+          <ellipse cx="52" cy="14" rx="16" ry="10" fill="#2d1b0e" />
+          <!-- Head -->
+          <circle cx="54" cy="26" r="16" fill="#d4956a" />
+          <!-- Eyes white -->
+          <circle cx="47" cy="23" r="4.5" fill="white" />
+          <circle cx="61" cy="23" r="4.5" fill="white" />
+          <!-- Pupils -->
+          <circle cx="48" cy="23" r="3" fill="#1a1a2a" />
+          <circle cx="62" cy="23" r="3" fill="#1a1a2a" />
+          <!-- Shine -->
+          <circle cx="49" cy="21.5" r="1.1" fill="white" />
+          <circle cx="63" cy="21.5" r="1.1" fill="white" />
+          <!-- Strong brows -->
+          <path
+            d="M 43 17 Q 47 14.5 51 17"
+            stroke="#2d1b0e"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 57 17 Q 61 14.5 65 17"
+            stroke="#2d1b0e"
+            stroke-width="2"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Determined smile -->
+          <path
+            d="M 49 31 Q 54 35 59 31"
+            stroke="#a06040"
+            stroke-width="1.5"
+            fill="none"
+            stroke-linecap="round"
+          />
+          <!-- Neck -->
+          <rect x="50" y="41" width="9" height="8" rx="3" fill="#d4956a" />
+          <!-- Red super suit top -->
+          <rect x="34" y="48" width="38" height="30" rx="7" fill="#dc2626" />
+          <!-- Cape shoulder attachment -->
+          <rect x="30" y="48" width="8" height="7" rx="3" fill="#dc2626" />
+          <!-- Chest emblem circle -->
+          <circle cx="53" cy="61" r="10" fill="#b91c1c" />
+          <!-- Code power symbol on chest -->
+          <path
+            d="M 47 57 L 44 61 L 47 65"
+            stroke="#64ffda"
+            stroke-width="1.8"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <line
+            x1="51"
+            y1="56"
+            x2="49"
+            y2="66"
+            stroke="#64ffda"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+          <path
+            d="M 54 57 L 57 61 L 54 65"
+            stroke="#64ffda"
+            stroke-width="1.8"
+            fill="none"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <!-- Left arm (posed forward + power glow) -->
+          <rect x="22" y="49" width="13" height="22" rx="6.5" fill="#dc2626" />
+          <circle cx="28.5" cy="73" r="6.5" fill="#d4956a" />
+          <circle
+            cx="28.5"
+            cy="73"
+            r="10"
+            fill="rgba(100,255,218,0.15)"
+            class="power-glow"
+          />
+          <!-- Right arm -->
+          <rect x="72" y="49" width="13" height="22" rx="6.5" fill="#dc2626" />
+          <circle cx="78.5" cy="73" r="6.5" fill="#d4956a" />
+          <!-- Gold belt -->
+          <rect x="34" y="76" width="38" height="7" rx="2" fill="#f59e0b" />
+          <rect x="49" y="75" width="10" height="9" rx="2" fill="#d97706" />
+          <!-- Blue suit bottom -->
+          <rect x="35" y="82" width="36" height="18" rx="3" fill="#1e3a8a" />
+          <!-- Left leg -->
+          <rect
+            x="36"
+            y="99"
+            width="14"
+            height="32"
+            rx="7"
+            fill="#1e3a8a"
+            class="leg-hero-l"
+          />
+          <!-- Right leg -->
+          <rect
+            x="57"
+            y="99"
+            width="14"
+            height="32"
+            rx="7"
+            fill="#1e3a8a"
+            class="leg-hero-r"
+          />
+          <!-- Red boots -->
+          <ellipse cx="43" cy="132" rx="10" ry="5.5" fill="#dc2626" />
+          <ellipse cx="64" cy="132" rx="10" ry="5.5" fill="#dc2626" />
+          <!-- Boot highlight -->
+          <ellipse
+            cx="43"
+            cy="130"
+            rx="7.5"
+            ry="2"
+            fill="rgba(255,255,255,0.18)"
+          />
+          <ellipse
+            cx="64"
+            cy="130"
+            rx="7.5"
+            ry="2"
+            fill="rgba(255,255,255,0.18)"
+          />
+        </svg>
+      </ng-container>
+    </div>
+  </div>
+
+  <!-- ── Stage indicator ────────────────────────────────── -->
+  <div class="stage-indicator">
+    <span class="pixel ind-label">{{ stages[currentStage - 1].label }}</span>
+    <div class="progress-track">
+      <div
+        class="progress-fill"
+        [style.width.%]="(currentStage / stages.length) * 100"
+      ></div>
+    </div>
+    <div class="progress-dots">
+      <span
+        *ngFor="let s of stages; let i = index"
+        class="dot"
+        [class.active]="i < currentStage"
+        [class.current]="i === currentStage - 1"
+      >
+      </span>
+    </div>
+  </div>
+</section>

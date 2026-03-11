@@ -1,0 +1,57 @@
+<section class="hero">
+  <!-- Subtle grid background -->
+  <div class="grid-bg"></div>
+  <!-- CRT scanlines -->
+  <div class="scanlines"></div>
+
+  <!-- Game HUD -->
+  <div class="hud">
+    <div class="hud-left">
+      <span class="pixel hud-label">PLAYER.ONE</span>
+      <div class="hearts">
+        <span class="heart">&#9829;</span>
+        <span class="heart">&#9829;</span>
+        <span class="heart">&#9829;</span>
+      </div>
+    </div>
+    <div class="hud-right">
+      <span class="pixel hud-coord">LVL: MAX</span>
+    </div>
+  </div>
+
+  <!-- Main content -->
+  <div class="hero-main">
+    <!-- Egg avatar -->
+    <div class="egg-avatar">
+      <div class="egg-body">
+        <div class="egg-shine"></div>
+        <div class="egg-crack"></div>
+      </div>
+      <div class="egg-glow"></div>
+      <div class="egg-shadow"></div>
+    </div>
+
+    <!-- Name -->
+    <h1 class="hero-name pixel">&lt; DIYA /&gt;</h1>
+
+    <!-- Divider -->
+    <div class="name-divider"></div>
+
+    <!-- Title -->
+    <p class="hero-subtitle">Frontend Engineer</p>
+
+    <!-- Tech stack -->
+    <div class="tech-stack">
+      <span class="tech-tag pixel" *ngFor="let t of techStack">{{ t }}</span>
+    </div>
+  </div>
+
+  <!-- Scroll prompt -->
+  <div class="scroll-prompt">
+    <span class="pixel scroll-label">SCROLL TO START</span>
+    <div class="scroll-arrows">
+      <span class="arrow">&#9660;</span>
+      <span class="arrow delay">&#9660;</span>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,245 @@
+// ===================================================
+// Skills Section
+// ===================================================
+
+.skills-section {
+  position: relative;
+  background: var(--bg);
+  padding: 120px 24px;
+  overflow: hidden;
+
+  // Subtle dot-grid overlay
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+    background-size: 28px 28px;
+    opacity: 0.35;
+    pointer-events: none;
+  }
+}
+
+// ---------------------------------------------------
+// Section inner container
+// ---------------------------------------------------
+
+.section-inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// ---------------------------------------------------
+// Heading block
+// ---------------------------------------------------
+
+.skills-heading {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+.section-title {
+  font-family: var(--body-font);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.section-sub {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+// ---------------------------------------------------
+// Skills grid
+// ---------------------------------------------------
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+// ---------------------------------------------------
+// Skill card  - flip-up reveal on hover
+// ---------------------------------------------------
+
+.skill-card {
+  position: relative;
+  height: 100px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: default;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+  // Front face (default visible)
+  .skill-front {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 12px;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                opacity 0.25s ease;
+  }
+
+  // Back face (slides up on hover)
+  .skill-back {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px;
+    transform: translateY(100%);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+
+    .skill-front {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    .skill-back {
+      transform: translateY(0);
+    }
+  }
+
+  // ---------------------------------------------------
+  // Category color variants
+  // ---------------------------------------------------
+
+  &.cat-core {
+    --skill-color: var(--accent);
+
+    &:hover {
+      border-color: var(--accent);
+      box-shadow: 0 0 18px rgba(100, 255, 218, 0.15);
+    }
+
+    .skill-back {
+      background: rgba(100, 255, 218, 0.06);
+    }
+  }
+
+  &.cat-tools {
+    --skill-color: var(--accent-warm);
+
+    &:hover {
+      border-color: var(--accent-warm);
+      box-shadow: 0 0 18px rgba(255, 159, 67, 0.15);
+    }
+
+    .skill-back {
+      background: rgba(255, 159, 67, 0.06);
+    }
+
+    .years-label,
+    .category-tag {
+      color: var(--accent-warm);
+    }
+  }
+
+  &.cat-concepts {
+    --skill-color: var(--accent-purple);
+
+    &:hover {
+      border-color: var(--accent-purple);
+      box-shadow: 0 0 18px rgba(162, 155, 254, 0.15);
+    }
+
+    .skill-back {
+      background: rgba(162, 155, 254, 0.06);
+    }
+
+    .years-label,
+    .category-tag {
+      color: var(--accent-purple);
+    }
+  }
+}
+
+// ---------------------------------------------------
+// Skill name
+// ---------------------------------------------------
+
+.skill-name {
+  font-family: var(--body-font);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  text-align: center;
+  line-height: 1.3;
+}
+
+// ---------------------------------------------------
+// Level dots
+// ---------------------------------------------------
+
+.skill-level {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.level-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  flex-shrink: 0;
+
+  &.filled {
+    background: var(--skill-color, var(--accent));
+    box-shadow: 0 0 4px var(--skill-color, var(--accent));
+  }
+
+  &.empty {
+    background: transparent;
+    border: 1px solid var(--muted);
+    opacity: 0.5;
+  }
+}
+
+// ---------------------------------------------------
+// Back face labels
+// ---------------------------------------------------
+
+.years-label {
+  font-family: var(--pixel-font);
+  font-size: 11px;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+}
+
+.category-tag {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  opacity: 0.75;
+}

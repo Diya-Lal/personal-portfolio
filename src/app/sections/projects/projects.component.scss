@@ -1,0 +1,213 @@
+// ===================================================
+// Projects Section
+// ===================================================
+
+.projects-section {
+  position: relative;
+  background: var(--bg);
+  padding: 120px 24px;
+  overflow: hidden;
+}
+
+// ---------------------------------------------------
+// Section inner container
+// ---------------------------------------------------
+
+.section-inner {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+// ---------------------------------------------------
+// Heading block
+// ---------------------------------------------------
+
+.projects-heading {
+  margin-bottom: 56px;
+  text-align: center;
+}
+
+.section-tag {
+  display: inline-block;
+  font-family: var(--pixel-font);
+  font-size: 10px;
+  color: var(--accent);
+  letter-spacing: 0.12em;
+  margin-bottom: 14px;
+  opacity: 0.8;
+}
+
+.section-title {
+  font-family: var(--body-font);
+  font-size: clamp(1.8rem, 4vw, 2.8rem);
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 12px;
+}
+
+.section-sub {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+// ---------------------------------------------------
+// Projects grid  -  3 col desktop, 1 col mobile
+// ---------------------------------------------------
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+
+  @media (max-width: 900px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 600px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// ---------------------------------------------------
+// Project card
+// ---------------------------------------------------
+
+.project-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid rgba(var(--card-color, #64ffda), 0.18);
+  border-color: color-mix(in srgb, var(--card-color, #64ffda) 18%, transparent);
+  border-radius: 8px;
+  padding: 28px 24px 22px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+  cursor: default;
+
+  // On hover: lift + show card-glow
+  &:hover {
+    transform: translateY(-6px);
+    border-color: color-mix(in srgb, var(--card-color, #64ffda) 45%, transparent);
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.4);
+
+    .card-glow {
+      opacity: 1;
+    }
+
+    .view-link {
+      color: var(--card-color, var(--accent));
+    }
+  }
+}
+
+// ---------------------------------------------------
+// Glow element (bottom radial bloom on hover)
+// ---------------------------------------------------
+
+.card-glow {
+  position: absolute;
+  bottom: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  height: 80px;
+  background: radial-gradient(ellipse at center, var(--card-color, #64ffda) 0%, transparent 70%);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  filter: blur(12px);
+}
+
+// ---------------------------------------------------
+// Card header  -  icon + status badge
+// ---------------------------------------------------
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.card-icon {
+  font-size: 1.4rem;
+  color: var(--card-color, var(--accent));
+  line-height: 1;
+}
+
+.card-status {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--card-color, var(--accent));
+  border: 1px solid var(--card-color, var(--accent));
+  border-radius: 3px;
+  padding: 3px 7px;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+}
+
+// ---------------------------------------------------
+// Card body
+// ---------------------------------------------------
+
+.card-name {
+  font-family: var(--body-font);
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  margin: 0 0 10px;
+  line-height: 1.3;
+}
+
+.card-desc {
+  font-family: var(--body-font);
+  font-size: 0.875rem;
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0 0 20px;
+  flex: 1;
+}
+
+// ---------------------------------------------------
+// Tech chips
+// ---------------------------------------------------
+
+.card-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 20px;
+}
+
+.tech-chip {
+  font-family: var(--pixel-font);
+  font-size: 7px;
+  color: var(--muted);
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 4px 8px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+// ---------------------------------------------------
+// Card footer  -  view link
+// ---------------------------------------------------
+
+.card-footer {
+  margin-top: auto;
+}
+
+.view-link {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  transition: color 0.25s ease;
+  cursor: pointer;
+}

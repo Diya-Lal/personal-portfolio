@@ -1,0 +1,192 @@
+// ===================================================
+// Contact Section
+// ===================================================
+
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  padding: 100px 24px;
+  overflow: hidden;
+}
+
+// ---------------------------------------------------
+// Dot-grid background
+// ---------------------------------------------------
+
+.contact-grid-bg {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, var(--border) 1px, transparent 1px);
+  background-size: 28px 28px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+// ---------------------------------------------------
+// Bottom-center teal glow
+// ---------------------------------------------------
+
+.contact-glow {
+  position: absolute;
+  bottom: -80px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 280px;
+  background: radial-gradient(ellipse at center, rgba(100, 255, 218, 0.18) 0%, transparent 70%);
+  pointer-events: none;
+  filter: blur(24px);
+  z-index: 0;
+}
+
+// ---------------------------------------------------
+// Inner content container  -  centered column
+// ---------------------------------------------------
+
+.contact-inner {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 700px;
+  width: 100%;
+}
+
+// ---------------------------------------------------
+// Tag
+// ---------------------------------------------------
+
+.contact-tag-wrap {
+  margin-bottom: 4px;
+}
+
+.contact-tag {
+  font-family: var(--pixel-font);
+  font-size: 9px;
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  opacity: 0.8;
+}
+
+// ---------------------------------------------------
+// Title  -  pixel font, teal, glow
+// ---------------------------------------------------
+
+.contact-title {
+  font-family: var(--pixel-font);
+  font-size: clamp(1.1rem, 3vw, 2rem);
+  color: var(--accent);
+  line-height: 1.5;
+  margin: 0;
+  text-shadow:
+    0 0 20px rgba(100, 255, 218, 0.55),
+    0 0 40px rgba(100, 255, 218, 0.25);
+  letter-spacing: 0.04em;
+}
+
+// ---------------------------------------------------
+// Sub text and CTA  -  Syne
+// ---------------------------------------------------
+
+.contact-sub {
+  font-family: var(--body-font);
+  font-size: 1.05rem;
+  color: var(--muted);
+  margin: 0;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+.contact-cta {
+  font-family: var(--body-font);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 4px 0 0;
+}
+
+// ---------------------------------------------------
+// Contact links row
+// ---------------------------------------------------
+
+.contact-links {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+// ---------------------------------------------------
+// Individual link card
+// ---------------------------------------------------
+
+.contact-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-width: 110px;
+  padding: 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  text-decoration: none;
+  color: var(--text);
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: var(--accent);
+    box-shadow: 0 0 24px rgba(100, 255, 218, 0.15);
+
+    .link-icon {
+      color: var(--accent);
+    }
+
+    .link-label {
+      color: var(--accent);
+    }
+  }
+}
+
+.link-icon {
+  font-size: 1.5rem;
+  color: var(--muted);
+  line-height: 1;
+  transition: color 0.25s ease;
+}
+
+.link-label {
+  font-family: var(--pixel-font);
+  font-size: 8px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  transition: color 0.25s ease;
+}
+
+// ---------------------------------------------------
+// Footer note  -  very small pixel text, muted
+// ---------------------------------------------------
+
+.footer-note {
+  margin-top: 32px;
+  opacity: 0.45;
+}
+
+.footer-text {
+  font-family: var(--pixel-font);
+  font-size: 7px;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+}

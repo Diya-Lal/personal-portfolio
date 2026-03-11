@@ -1,0 +1,34 @@
+<section class="experience-section">
+  <div class="section-inner">
+    <div class="exp-heading">
+      <span class="pixel section-tag">CAREER</span>
+      <h2 class="section-title">Experience</h2>
+      <p class="section-sub">The professional journey, chapter by chapter.</p>
+    </div>
+
+    <div class="exp-timeline">
+      <div class="timeline-line"></div>
+
+      <div class="job-entry" *ngFor="let job of jobs; let last = last">
+        <div class="job-dot">
+          <div class="dot-inner"></div>
+        </div>
+        <div class="job-content">
+          <span class="pixel job-year">{{ job.year }}</span>
+          <h3 class="job-role">{{ job.role }}</h3>
+          <div class="job-meta">
+            <span class="job-company">{{ job.company }}</span>
+            <span class="job-location">{{ job.location }}</span>
+          </div>
+          <p class="job-desc">{{ job.desc }}</p>
+          <ul class="job-bullets">
+            <li *ngFor="let bullet of job.bullets">{{ bullet }}</li>
+          </ul>
+          <div class="job-tags">
+            <span class="job-tag" *ngFor="let tag of job.tags">{{ tag }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

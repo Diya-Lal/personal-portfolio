@@ -1,0 +1,37 @@
+<section class="contact-section">
+  <div class="contact-inner">
+    <div class="contact-tag-wrap">
+      <span class="pixel contact-tag">TRANSMISSION END</span>
+    </div>
+
+    <h2 class="contact-title pixel">THE JOURNEY<br />CONTINUES...</h2>
+
+    <p class="contact-sub">
+      The story isn't over. Let's write the next chapter together.
+    </p>
+
+    <p class="contact-cta">Let's build something amazing.</p>
+
+    <div class="contact-links">
+      <a
+        class="contact-link"
+        *ngFor="let l of links"
+        [href]="l.href"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="link-icon" [innerHTML]="l.icon"></span>
+        <span class="pixel link-label">{{ l.label }}</span>
+      </a>
+    </div>
+
+    <div class="footer-note">
+      <span class="pixel footer-text"
+        >CRAFTED WITH ANGULAR + GSAP + CLUADE CODE + &#9829;</span
+      >
+    </div>
+  </div>
+
+  <div class="contact-grid-bg"></div>
+  <div class="contact-glow"></div>
+</section>
