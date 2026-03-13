@@ -6,10 +6,11 @@ export interface Project {
   name: string;
   desc: string;
   tech: string[];
-  status: string;
+  status?: string;
   color: string;
   icon: string;
   link: string;
+  github: string;
 }
 
 @Component({
@@ -23,28 +24,30 @@ export class ProjectsComponent implements AfterViewInit {
       name: 'Evolution Portfolio',
       desc: 'This very portfolio — a scroll-driven side-scroller that evolves as you explore. Built with Angular, GSAP ScrollTrigger, and pure CSS art.',
       tech: ['Angular', 'GSAP', 'TypeScript', 'Tailwind'],
-      status: 'LIVE',
+      status: 'AI-first Developement',
       color: '#64ffda',
       icon: '&#9670;',
-      link: '',
+      link: 'https://diya-lal-portfolio.vercel.app/',
+      github: 'https://github.com/Diya-Lal/personal-portfolio',
     },
     {
       name: 'WanderBite',
       desc: 'A travel food discovery platform. Find the best local bites wherever you wander. Explore curated food spots city by city.',
       tech: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
-      status: 'LIVE',
+      status: 'AI-first Developement',
       color: '#ff9f43',
       icon: '&#9650;',
       link: 'https://wanderbite.netlify.app/homepage',
+      github: 'https://github.com/Diya-Lal/wanderbite',
     },
     {
       name: 'DFlix',
       desc: 'A Netflix-inspired movie discovery site powered by the TMDB API. Browse, search, and explore films and TV shows.',
       tech: ['Angular', 'TypeScript', 'TMDB API'],
-      status: 'OSS',
       color: '#a29bfe',
       icon: '&#9632;',
       link: 'https://github.com/Diya-Lal/Dflix',
+      github: 'https://github.com/Diya-Lal/Dflix',
     },
   ];
 

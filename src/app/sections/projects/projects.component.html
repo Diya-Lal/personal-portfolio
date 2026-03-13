@@ -14,7 +14,7 @@
       >
         <div class="card-header">
           <span class="card-icon" [innerHTML]="p.icon"></span>
-          <span class="pixel card-status">{{ p.status }}</span>
+          <span class="pixel card-status" *ngIf="p.status">{{ p.status }}</span>
         </div>
         <h3 class="card-name">{{ p.name }}</h3>
         <p class="card-desc">{{ p.desc }}</p>
@@ -22,7 +22,20 @@
           <span class="tech-chip pixel" *ngFor="let t of p.tech">{{ t }}</span>
         </div>
         <div class="card-footer">
-          <a class="view-link pixel" [href]="p.link" target="_blank" rel="noopener">VIEW PROJECT &gt;</a>
+          <a
+            class="view-link pixel"
+            [href]="p.link"
+            target="_blank"
+            rel="noopener"
+            >VIEW PROJECT &gt;</a
+          >
+          <a
+            class="view-link pixel"
+            [href]="p.github"
+            target="_blank"
+            rel="noopener"
+            >VIEW GITHUB &gt;</a
+          >
         </div>
         <div class="card-glow"></div>
       </div>
