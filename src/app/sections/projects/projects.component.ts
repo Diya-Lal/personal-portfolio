@@ -21,16 +21,6 @@ export interface Project {
 export class ProjectsComponent implements AfterViewInit {
   projects: Project[] = [
     {
-      name: 'Evolution Portfolio',
-      desc: 'This very portfolio — a scroll-driven side-scroller that evolves as you explore. Built with Angular, GSAP ScrollTrigger, and pure CSS art.',
-      tech: ['Angular', 'GSAP', 'TypeScript', 'Tailwind'],
-      status: 'AI-first Developement',
-      color: '#64ffda',
-      icon: '&#9670;',
-      link: 'https://diya-lal-portfolio.vercel.app/',
-      github: 'https://github.com/Diya-Lal/personal-portfolio',
-    },
-    {
       name: 'WanderBite',
       desc: 'A travel food discovery platform. Find the best local bites wherever you wander. Explore curated food spots city by city.',
       tech: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
@@ -41,12 +31,31 @@ export class ProjectsComponent implements AfterViewInit {
       github: 'https://github.com/Diya-Lal/wanderbite',
     },
     {
+      name: 'Livepad',
+      desc: 'A full-stack real-time document collaboration platform with conflict-free sync using Yjs CRDTs and Hocuspocus WebSockets. Features JWT dual-token auth with silent session restore, optimistic UI via React Query, and a four-role permissions model (Owner, Editor, Commenter, Viewer) enforced across client and server.',
+      tech: [
+        'React',
+        'TypeScript',
+        'Node.js',
+        'Yjs',
+        'Tailwind',
+        'Hocuspocus',
+        'PostgreSQL',
+        'Prisma',
+        'Zod',
+      ],
+      color: '#64ffda',
+      icon: '&#9670;',
+      link: '',
+      github: 'https://github.com/Diya-Lal/livepad',
+    },
+    {
       name: 'DFlix',
       desc: 'A Netflix-inspired movie discovery site powered by the TMDB API. Browse, search, and explore films and TV shows.',
       tech: ['Angular', 'TypeScript', 'TMDB API'],
       color: '#a29bfe',
       icon: '&#9632;',
-      link: 'https://github.com/Diya-Lal/Dflix',
+      link: '',
       github: 'https://github.com/Diya-Lal/Dflix',
     },
   ];
@@ -67,7 +76,8 @@ export class ProjectsComponent implements AfterViewInit {
       stagger: 0.15,
       duration: 0.7,
       ease: 'power3.out',
-      scrollTrigger: { trigger: '.projects-grid', start: 'top 85%' },
+      immediateRender: false,
+      scrollTrigger: { trigger: '.projects-grid', start: 'top 85%', invalidateOnRefresh: true },
     });
   }
 }

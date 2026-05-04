@@ -19,18 +19,30 @@ export class SkillsComponent implements AfterViewInit {
 
   skills: Skill[] = [
     { name: 'Angular', years: 4, category: 'core', level: 5 },
+    { name: 'React', years: 2, category: 'core', level: 4 },
     { name: 'TypeScript', years: 4, category: 'core', level: 5 },
-    { name: 'RxJS', years: 3, category: 'core', level: 5 },
-    { name: 'HTML / CSS', years: 6, category: 'core', level: 5 },
     { name: 'JavaScript', years: 5, category: 'core', level: 5 },
+    { name: 'RxJS', years: 3, category: 'core', level: 5 },
+    { name: 'HTML / CSS / SCSS', years: 6, category: 'core', level: 5 },
     { name: 'Nx Monorepos', years: 2, category: 'tools', level: 5 },
+    { name: 'Module Federation', years: 2, category: 'tools', level: 4 },
     { name: 'Git', years: 5, category: 'tools', level: 4 },
     { name: 'Node.js', years: 3, category: 'tools', level: 3 },
+    { name: 'Express.js', years: 2, category: 'tools', level: 3 },
     { name: 'Tailwind CSS', years: 2, category: 'tools', level: 4 },
+    { name: 'Storybook', years: 2, category: 'tools', level: 4 },
+    { name: 'Jest', years: 3, category: 'tools', level: 4 },
+    { name: 'Cypress', years: 2, category: 'tools', level: 4 },
+    { name: 'Firebase', years: 2, category: 'tools', level: 3 },
+    { name: 'GitHub Actions', years: 2, category: 'tools', level: 3 },
+    { name: 'Docker', years: 1, category: 'tools', level: 3 },
+    { name: 'Figma', years: 3, category: 'tools', level: 3 },
     { name: 'Microfrontends', years: 2, category: 'concepts', level: 5 },
     { name: 'Performance', years: 3, category: 'concepts', level: 5 },
     { name: 'REST APIs', years: 4, category: 'concepts', level: 4 },
+    { name: 'Accessibility (WCAG)', years: 3, category: 'concepts', level: 4 },
     { name: 'Agile / Scrum', years: 3, category: 'concepts', level: 4 },
+    { name: 'AI-assisted Dev', years: 1, category: 'concepts', level: 4 },
   ];
 
   levelDots(n: number): number[] {

@@ -23,6 +23,7 @@
         </div>
         <div class="card-footer">
           <a
+            *ngIf="p.link"
             class="view-link pixel"
             [href]="p.link"
             target="_blank"
