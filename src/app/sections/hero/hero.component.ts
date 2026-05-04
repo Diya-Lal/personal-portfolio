@@ -11,6 +11,7 @@ export class HeroComponent implements AfterViewInit {
     'Angular',
     'TypeScript',
     'RxJS',
+    'React',
     'Nx Monorepos',
     'Micro Frontends',
   ];

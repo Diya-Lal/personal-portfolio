@@ -22,9 +22,15 @@ export class ProjectsComponent implements AfterViewInit {
   projects: Project[] = [
     {
       name: 'WanderBite',
-      desc: 'A travel food discovery platform. Find the best local bites wherever you wander. Explore curated food spots city by city.',
-      tech: ['Angular', 'TypeScript', 'RxJS', 'REST APIs'],
-      status: 'AI-first Developement',
+      desc: 'A travel food discovery platform built on a full Micro Frontend architecture using Nx Monorepo and Webpack Module Federation with independently deployable Angular and React micro-apps.',
+      tech: [
+        'Angular',
+        'React',
+        'TypeScript',
+        'Nx',
+        'Module Federation',
+        'RxJS',
+      ],
       color: '#ff9f43',
       icon: '&#9650;',
       link: 'https://wanderbite.netlify.app/homepage',
@@ -52,7 +58,7 @@ export class ProjectsComponent implements AfterViewInit {
     {
       name: 'DFlix',
       desc: 'A Netflix-inspired movie discovery site powered by the TMDB API. Browse, search, and explore films and TV shows.',
-      tech: ['Angular', 'TypeScript', 'TMDB API'],
+      tech: ['Angular', 'TypeScript', 'TMDB API', 'Chart.js'],
       color: '#a29bfe',
       icon: '&#9632;',
       link: '',
@@ -77,7 +83,11 @@ export class ProjectsComponent implements AfterViewInit {
       duration: 0.7,
       ease: 'power3.out',
       immediateRender: false,
-      scrollTrigger: { trigger: '.projects-grid', start: 'top 85%', invalidateOnRefresh: true },
+      scrollTrigger: {
+        trigger: '.projects-grid',
+        start: 'top 85%',
+        invalidateOnRefresh: true,
+      },
     });
   }
 }

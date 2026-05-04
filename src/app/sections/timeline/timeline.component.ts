@@ -112,10 +112,11 @@ export class TimelineComponent implements AfterViewInit, OnDestroy {
         start: 'top top',
         end: `+=${numStages * window.innerWidth}`,
         anticipatePin: 1,
-        onUpdate: (self) => {
+        onUpdate: () => {
+          const x = gsap.getProperty(world, 'x') as number;
           const stage = Math.min(
             numStages,
-            Math.floor(self.progress * numStages) + 1,
+            Math.floor(-x / window.innerWidth + 0.25) + 1,
           );
           if (stage !== this.currentStage) {
             this.currentStage = stage;
