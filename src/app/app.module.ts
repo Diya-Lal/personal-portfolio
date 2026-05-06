@@ -10,6 +10,7 @@ import { SkillsComponent } from './sections/skills/skills.component';
 import { ProjectsComponent } from './sections/projects/projects.component';
 import { ExperienceComponent } from './sections/experience/experience.component';
 import { ContactComponent } from './sections/contact/contact.component';
+import { AskDiyaComponent } from './sections/chatbot/ask-diya.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ContactComponent } from './sections/contact/contact.component';
   imports: [
     BrowserModule,
     CommonModule,
-    AppRoutingModule
+    AppRoutingModule,
+    AskDiyaComponent
   ],
   providers: [],
   bootstrap: [AppComponent]
